@@ -2,32 +2,159 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" initial scale="1.0">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
         <title>Coffee House</title>
-        <link rel="stylesheet" href="homestyle.css">
+        <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="./normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="container">
             <header class="header-container">
-                <div>
-                    <img src="./img/logo.svg" alt="logo">
+                <div class="header-bar">
+                    <img src="./img/logo.svg" alt="logo" class="logo">
                     <nav>
                         <ul>
-                            <li>Favorite coffee </li>
-                            <li>About</li>
-                            <li>Mobile app</li>
-                            <li>Contact us</li>
+                            <li>
+                                <a href=".favorite">Favorite coffee</a>
+                                <div></div>
+                            </li>
+                            <li>
+                                <a href=".about">About</a>
+                                <div></div>
+                            </li>
+                            <li>
+                                <a href=".mobile">Mobile app</a>
+                                <div></div>
+                            </li>
+                            <li>
+                                <a href="#footer">Contact us</a>
+                                <div></div>
+                            </li>
                         </ul>
                     </nav>
-                    <img src="./img/menu-item.svg" alt="Menu button">
+                    <a href="./menu.html">
+                        <img src="./img/menu-item.svg" alt="menu button">
+                        <div></div>
+                    </a>
+                </div>
+                <div class="hero-outer-container">
+                    <div class="hero-inner-container">
+                        <div class="offer">
+                            <p class="enjoy"><span>Enjoy</span> premium coffee at our charming cafe</p>
+                            <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination
+                            for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+                            <a href="./menu.html" class="button-link">Menu</a>
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
             </header>
-            <main>
+            <div class="favorite-outer-container">
+                <div class="favorite-inner-container">
+                    <p>Choose your <span>favorite</span> coffee</p>
+                    <div class="slider-outer-container">
+                        <div class="slider-inner-container">
+                            <img src="./img/arrow-left.svg" alt="arrow to the left" class="circle-button">
+                            <div class="slide-1">
+                                <div class="slider-content">
+                                    <img src="./img/coffee-slider-1.svg" alt="S'mores Frappucino">
+                                    <div class="slider-description">
+                                        <p>S'mores Frappuccino</p>
+                                        <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before 
+                                            being topped with oat milk.</p>
+                                        <p>$5.50</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./img/arrow-right.svg" alt="arrow to the right" class="circle-button">
+                        </div>
+                        <div>
+                            <div class="controls-dark"></div>
+                            <div class="controls-light"></div>
+                            <div class="controls-light"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about">
+                <div class="about-container">
+                    <p>Resource is <span>the perfect and cozy place</span> where you can enjoy a variety of 
+                        hot beverages, relax, catch up with friends, or get some work done.</p>
+                    <div class="about-images">
+                        <div class="column-1">
+                           <div class="box-1">
+                                <div></div>
+                           </div>
+                           <div class="box-2">
+                                <div></div>
+                           </div>
+                        </div>
+                        <div class="column-2">
+                            <div class="box-3">
+                                <div></div>
+                            </div>
+                            <div class="box-4">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="mobile-container">
+                    <div class="mobile-offer">
+                        <p><span>Download</span> our apps to start ordering</p>
+                        <p>Download the Resource app today and experience the comfort of 
+                            ordering your favorite coffee from wherever you are</p>
+                        <div class="mobile-buttons">
+                            <div class="app-button">
+                                <img src="./img/app-icon.svg" alt="apple logo">
+                                <p>Available on the</p>
+                                <p>App Store</p>
+                            </div>
+                            <div class="play-button">
+                                <img src="./img/play-icon.svg" alt="google play logo">
+                                <p>Available on</p>
+                                <p>Google Play</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-screens"></div>
+                </div>
+            </div>
+            <footer class="contacts">
+                <div class="contacts-container">
+                    <div class="offer">
+                        <p>Sip, Savor, Smile. <span>It's coffee time!</span></p>
+                        <div class="socials">
+                            <img src="./img/twitter.svg" alt="twitter logo">
+                            <img src="./img/instagram.svg" alt="instagram logo">
+                            <img src="./img/facebook.svg" alt="facebook logo">
+                        </div>
+                    </div>
+                    <div class="contacts-info">
+                        <p>Contact us</p>
+                        <div class="contacts">
+                            <div class="adress">
+                                <img src="./img/pin-alt.svg" alt="map icon">
+                                <a href="https://maps.app.goo.gl/CibNDf2YTUiJejWs7" target="_blank">8558 Green Rd.,  LA</a>
+                            </div>
+                            <div class="phone">
+                                <img src="./img/phone.svg" alt="phone icon">
+                                <a href="tel:0016035550123">+1 (603) 555-0123</a>
+                            </div>
+                            <div class="opening hours">
+                                <img src="./img/clock.svg" alt="clock icon">
+                                <p>Mon-Sat: 9:00 AM - 23:00 PM</p>
+                            </div>
 
-            </main>
-            <footer>
-                Contact us
+                        </div>
+                    </div>
+                </div>
             </footer>
         </div>
     </body>
