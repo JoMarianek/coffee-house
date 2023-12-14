@@ -40,6 +40,7 @@ h1 {
   font-weight: 600;
   line-height: 150%;
   text-decoration: none;
+  color: #403f3d;
 }
 .container .header-container .header-bar nav ul {
   display: flex;
