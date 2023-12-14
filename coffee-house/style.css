@@ -17,6 +17,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container .header-container {
   display: flex; /*creates flexbox that orders elements either in rows or columns*/
@@ -32,19 +34,6 @@ h1 {
   justify-content: space-between; /*Distributes items evenly. The first item is flush with the start, the last flush with the end*/
   align-items: center;
   align-self: stretch;
-  /*div
-  {
-      border-bottom: 2px solid #403f3d;
-      align-self: center;
-      width: 0%;
-      transition: width .7s, opacity .7s;
-      opacity: 0;
-  }
-  div:hover
-  {
-      width: 100%;
-      opacity: 1;
-  } why doesnt a div work here?*/
 }
 .container .header-container .header-bar a {
   font-size: 16px;
@@ -58,10 +47,6 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  /*li a
-  {
-      @include link-and-button;
-  }*/
 }
 .container .header-container .header-bar nav ul li {
   display: flex;
@@ -148,7 +133,6 @@ h1 {
 }
 .container .header-container .offer .button-link {
   display: flex;
-  /*width: 200px;*/
   padding: 20px 78px;
   justify-content: center;
   align-items: center;
@@ -160,6 +144,20 @@ h1 {
   line-height: 150%;
   text-decoration: none;
   color: #403f3d;
+}
+.container .header-container .offer .button-link .menu-text {
+  transform: translateX(14px);
+  transition: transform 0.5s; /*write it as a variable*/
+}
+.container .header-container .offer .button-link .coffee-cup {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.container .header-container .offer .button-link:hover .menu-text {
+  transform: translateX(0);
+}
+.container .header-container .offer .button-link:hover .coffee-cup {
+  opacity: 1;
 }
 .container #favorite-outer-container {
   display: flex;
@@ -294,6 +292,8 @@ h1 {
   align-items: center;
   gap: 40px;
   align-self: stretch;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container #about .about-container {
   display: flex;
@@ -332,10 +332,13 @@ h1 {
   gap: 40px;
 }
 .container #about .about-container .about-images .column-1 .box-1 {
+  display: flex;
   width: 660px;
   height: 590px;
   border-radius: 20px;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 .container #about .about-container .about-images .column-1 .box-1 div {
   width: 726px;
@@ -343,12 +346,19 @@ h1 {
   flex-shrink: 0;
   background: url("./img/about-1.svg"), lightgray 50%/cover no-repeat;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+.container #about .about-container .about-images .column-1 .box-1 div:hover {
+  transform: scale(0.9);
 }
 .container #about .about-container .about-images .column-1 .box-2 {
+  display: flex;
   width: 660px;
   height: 430px;
   border-radius: 20px;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 .container #about .about-container .about-images .column-1 .box-2 div {
   width: 726px;
@@ -356,6 +366,10 @@ h1 {
   flex-shrink: 0;
   background: url("./img/about-2.svg"), lightgray 50%/cover no-repeat;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+.container #about .about-container .about-images .column-1 .box-2 div:hover {
+  transform: scale(0.9);
 }
 .container #about .about-container .about-images .column-2 {
   display: flex;
@@ -364,10 +378,13 @@ h1 {
   gap: 40px;
 }
 .container #about .about-container .about-images .column-2 .box-3 {
+  display: flex;
   width: 660px;
   height: 430px;
   border-radius: 20px;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 .container #about .about-container .about-images .column-2 .box-3 div {
   width: 726px;
@@ -375,12 +392,19 @@ h1 {
   flex-shrink: 0;
   background: url("./img/about-3.svg"), lightgray 50%/cover no-repeat;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+.container #about .about-container .about-images .column-2 .box-3 div:hover {
+  transform: scale(0.9);
 }
 .container #about .about-container .about-images .column-2 .box-4 {
+  display: flex;
   width: 660px;
   height: 590px;
   border-radius: 20px;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 .container #about .about-container .about-images .column-2 .box-4 div {
   width: 726px;
@@ -388,6 +412,10 @@ h1 {
   flex-shrink: 0;
   background: url("./img/about-4.svg"), lightgray 50%/cover no-repeat;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+.container #about .about-container .about-images .column-2 .box-4 div:hover {
+  transform: scale(0.9);
 }
 .container #mobile {
   display: flex;
@@ -417,7 +445,7 @@ h1 {
   font-weight: 600;
   line-height: 125%;
   color: #403f3d;
-  margin: 0;
+  margin: 0 10px 0 0;
 }
 .container #mobile .mobile-container .mobile-offer p:first-of-type span {
   font-size: 60px;
@@ -442,6 +470,7 @@ h1 {
 .container #mobile .mobile-container .mobile-offer .mobile-buttons .app-button {
   display: flex;
   width: 200px;
+  box-sizing: border-box;
   padding: 12px 20px;
   align-items: center;
   gap: 8px;
@@ -453,7 +482,13 @@ h1 {
   height: 36px;
   flex-shrink: 0;
 }
-.container #mobile .mobile-container .mobile-offer .mobile-buttons .app-button p:first-of-type {
+.container #mobile .mobile-container .mobile-offer .mobile-buttons .app-button div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.container #mobile .mobile-container .mobile-offer .mobile-buttons .app-button div p:first-of-type {
   color: #403f3d;
   text-align: center;
   font-size: 10px;
@@ -461,18 +496,18 @@ h1 {
   line-height: 140%;
   margin: 0;
 }
-.container #mobile .mobile-container .mobile-offer .mobile-buttons .app-button p:last-of-type {
+.container #mobile .mobile-container .mobile-offer .mobile-buttons .app-button div p:last-of-type {
   color: #403f3d;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
   text-decoration: none;
-  color: #403f3d;
   margin: 0;
 }
 .container #mobile .mobile-container .mobile-offer .mobile-buttons .play-button {
   display: flex;
   width: 200px;
+  box-sizing: border-box;
   padding: 12px 20px;
   align-items: center;
   gap: 8px;
@@ -484,21 +519,26 @@ h1 {
   height: 36px;
   flex-shrink: 0;
 }
-.container #mobile .mobile-container .mobile-offer .mobile-buttons .play-button p:first-of-type {
+.container #mobile .mobile-container .mobile-offer .mobile-buttons .play-button div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.container #mobile .mobile-container .mobile-offer .mobile-buttons .play-button div p:first-of-type {
   color: #403f3d;
-  text-align: center;
+  text-align: start;
   font-size: 10px;
   font-weight: 600;
   line-height: 140%;
   margin: 0;
 }
-.container #mobile .mobile-container .mobile-offer .mobile-buttons .play-button p:last-of-type {
+.container #mobile .mobile-container .mobile-offer .mobile-buttons .play-button div p:last-of-type {
   color: #403f3d;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
   text-decoration: none;
-  color: #403f3d;
   margin: 0;
 }
 .container #mobile .mobile-container .mobile-screens {
@@ -516,6 +556,7 @@ h1 {
 .container #contacts .contacts-container {
   display: flex;
   max-width: 1360px;
+  box-sizing: border-box;
   padding: 100px;
   justify-content: center;
   align-items: center;
@@ -523,6 +564,8 @@ h1 {
   align-self: stretch;
   border-radius: 40px;
   background-color: #665F55;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container #contacts .contacts-container .offer {
   display: flex;
@@ -537,6 +580,7 @@ h1 {
   font-weight: 600;
   line-height: 125%;
   color: #E1D4C9;
+  margin: 0;
 }
 .container #contacts .contacts-container .offer p span {
   font-size: 60px;
@@ -550,7 +594,7 @@ h1 {
   align-items: center;
   gap: 12px;
 }
-.container #contacts .contacts-container .offer .socials img {
+.container #contacts .contacts-container .offer .socials .socials-links {
   display: flex;
   width: 60px;
   height: 60px;
@@ -558,6 +602,71 @@ h1 {
   align-items: center;
   border-radius: 100px;
   border: 1px solid #C1B6AD;
+  transition: background-color 0.5s ease;
+}
+.container #contacts .contacts-container .offer .socials .socials-links svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: filter 0.5s ease;
+}
+.container #contacts .contacts-container .offer .socials .socials-links:hover {
+  background-color: #C1B6AD;
+}
+.container #contacts .contacts-container .offer .socials .socials-links:hover path {
+  stroke: #403f3d;
+}
+.container #contacts .contacts-container .contacts-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex: 1 0 0;
+}
+.container #contacts .contacts-container .contacts-info p {
+  align-self: stretch;
+  color: #E1D4C9;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  margin: 0;
+}
+.container #contacts .contacts-container .contacts-info .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+.container #contacts .contacts-container .contacts-info .contacts a, .container #contacts .contacts-container .contacts-info .contacts p {
+  color: #E1D4C9;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+}
+.container #contacts .contacts-container .contacts-info .contacts .address div {
+  border-bottom: 2px solid #E1D4C9;
+  align-self: center;
+  width: 0%;
+  transition: width 0.7s, opacity 0.7s;
+  opacity: 0;
+}
+.container #contacts .contacts-container .contacts-info .contacts .address:hover div {
+  width: 100%;
+  opacity: 1;
+}
+.container #contacts .contacts-container .contacts-info .contacts .phone div {
+  border-bottom: 2px solid #E1D4C9;
+  align-self: center;
+  width: 0%;
+  transition: width 0.7s, opacity 0.7s;
+  opacity: 0;
+}
+.container #contacts .contacts-container .contacts-info .contacts .phone:hover div {
+  width: 100%;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
