@@ -3,6 +3,9 @@ html {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
+html ::-webkit-scrollbar {
+  display: none;
+}
 
 h1 {
   font-size: 72px;
@@ -17,8 +20,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .container .main {
   display: flex; /*creates flexbox that orders elements either in rows or columns*/
@@ -29,6 +31,7 @@ h1 {
 }
 .container .main .main-container {
   display: flex;
+  padding: 0 40px;
   max-width: 1360px;
   flex-direction: column;
   justify-content: center; /*Distributes items evenly. The first item is flush with the start, the last flush with the end*/
@@ -81,6 +84,9 @@ h1 {
   width: 100%;
   opacity: 1;
 }
+.container .main .main-container .header-menu .burger-button {
+  display: none;
+}
 .container .main .main-menu {
   display: flex;
   padding: 0 40px;
@@ -107,7 +113,7 @@ h1 {
   align-self: stretch;
 }
 .container .main .main-menu .menu-container .offer .offer-text {
-  width: 800px;
+  max-width: 800px;
   color: #403f3d;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
@@ -217,7 +223,7 @@ h1 {
 .container .main .main-menu .menu-container .grid .grid-preview {
   display: flex;
   height: 506px;
-  max-width: 308px;
+  max-width: 310px;
   flex-direction: column;
   align-items: center;
   border-radius: 40px;
@@ -259,7 +265,7 @@ h1 {
   display: flex;
   width: 310px;
   height: 310px;
-  /*flex-shrink: 0;*/
+  flex-shrink: 1;
   border-radius: 40px;
   overflow: hidden;
   justify-content: center;
@@ -269,7 +275,7 @@ h1 {
 .container .main .main-menu .menu-container .grid .grid-preview .box .coffee-1 {
   width: 340px;
   height: 340px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   background: url(./img/coffee-1.svg), lightgray 50%/cover no-repeat;
   background-position: center;
   transition: transform 0.5s ease;
@@ -278,7 +284,7 @@ h1 {
   display: flex;
   width: 310px;
   height: 310px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   border-radius: 40px;
   overflow: hidden;
   justify-content: center;
@@ -287,7 +293,7 @@ h1 {
 .container .main .main-menu .menu-container .grid .grid-preview .box-2 .coffee-2 {
   width: 340px;
   height: 340px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   background: url(./img/coffee-2.svg), lightgray 50%/cover no-repeat;
   background-position: center;
   transition: transform 0.5s ease;
@@ -296,7 +302,7 @@ h1 {
   display: flex;
   width: 310px;
   height: 310px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   border-radius: 40px;
   overflow: hidden;
   justify-content: center;
@@ -305,7 +311,7 @@ h1 {
 .container .main .main-menu .menu-container .grid .grid-preview .box-3 .coffee-3 {
   width: 340px;
   height: 340px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   background: url(./img/coffee-3.svg), lightgray 50%/cover no-repeat;
   background-position: center;
   transition: transform 0.5s ease;
@@ -314,7 +320,7 @@ h1 {
   display: flex;
   width: 310px;
   height: 310px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   border-radius: 40px;
   overflow: hidden;
   justify-content: center;
@@ -323,7 +329,7 @@ h1 {
 .container .main .main-menu .menu-container .grid .grid-preview .box-4 .coffee-4 {
   width: 340px;
   height: 340px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   background: url(./img/coffee-4.svg), lightgray 50%/cover no-repeat;
   background-position: center;
   transition: transform 0.5s ease;
@@ -441,8 +447,12 @@ h1 {
   line-height: 125%;
   margin: 0;
 }
+.container .main .main-menu .menu-container .refresh-button {
+  display: none;
+}
 .container #contacts {
   display: flex;
+  padding: 0 40px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -454,7 +464,7 @@ h1 {
   box-sizing: border-box;
   padding: 100px;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
   gap: 100px;
   align-self: stretch;
   border-radius: 40px;
@@ -562,6 +572,90 @@ h1 {
 .container #contacts .contacts-container .contacts-info .contacts .phone:hover div {
   width: 100%;
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  nav a img {
+    display: none;
+  }
+  nav a div {
+    display: none;
+  }
+  .menu-button {
+    display: none;
+  }
+  .container .main .main-container .header-menu .burger-button {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+  }
+  .container .main .main-container .header-menu .burger-button .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .container .main .main-menu .menu-container .grid > div:nth-of-type(5) {
+    display: none;
+  }
+  .container .main .main-menu .menu-container .grid > div:nth-of-type(6) {
+    display: none;
+  }
+  .container .main .main-menu .menu-container .grid > div:nth-of-type(7) {
+    display: none;
+  }
+  .container .main .main-menu .menu-container .grid > div:nth-of-type(8) {
+    display: none;
+  }
+  .container .main .main-menu .menu-container .refresh {
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
+  .container .main .main-menu .menu-container .refresh .refresh-button {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+    align-self: center;
+  }
+  #contacts {
+    display: flex;
+    padding: 0px 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .contacts-container {
+    display: flex;
+    /*max-width: 1360px;*/
+    padding: 100px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    align-items: stretch;
+    border-radius: 40px;
+    background: #665F55;
+    box-sizing: border-box;
+  }
+  html {
+    background-color: red;
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */
