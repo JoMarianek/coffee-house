@@ -312,6 +312,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+  padding: 0 40px;
 }
 .container #about .about-container {
   display: flex;
@@ -443,6 +444,7 @@ h1 {
   align-items: center;
   gap: 100px;
   align-self: stretch;
+  padding: 0 40px;
 }
 .container #mobile .mobile-container {
   display: flex;
@@ -572,6 +574,7 @@ h1 {
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  padding: 0 40px;
 }
 .container #contacts .contacts-container {
   display: flex;
