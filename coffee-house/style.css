@@ -313,6 +313,7 @@ h1 {
   margin-right: auto;
   box-sizing: border-box;
   padding: 0 40px;
+  width: 100%;
 }
 .container #about .about-container {
   display: flex;
@@ -693,7 +694,7 @@ h1 {
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   nav {
     display: none;
   }
@@ -817,9 +818,6 @@ h1 {
         stroke: initial;
     }*/
   }
-  html {
-    background-color: rgba(255, 72, 0, 0.877);
-  }
 }
 @media screen and (max-width: 700px) {
   .container .header .header-container {
@@ -879,7 +877,7 @@ h1 {
   .container #about .about-container p span {
     font-size: 32px;
   }
-  #about {
+  .container #about {
     padding: 0 16px;
     width: 100%;
     box-sizing: border-box;
@@ -935,9 +933,6 @@ h1 {
   }
   .container #contacts .contacts-container .offer p span {
     font-size: 32px;
-  }
-  html {
-    background-color: pink;
   }
 }
 
