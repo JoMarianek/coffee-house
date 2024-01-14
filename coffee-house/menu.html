@@ -10,7 +10,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-        <script src="index.js"></script>
     </head>
     <body>
         <div class="container">
@@ -61,27 +60,27 @@
                         <div class="offer">
                             <p class="offer-text">Behind each of our cups hides an <span>amazing surprise</span></p>
                             <div class="tabs">
-                                <div class="tab-item-first">
+                                <button class="tab-item tab-item-coffee">
                                     <div class="icon">
                                         <img src="./img/coffee-emoji.svg" alt="coffee emoji">
                                     </div>
                                     <p>Coffee</p>
-                                </div>
-                                <div class="tab-item">
+                                </button>
+                                <button class="tab-item tab-item-tea">
                                     <div class="icon">
                                         <img src="./img/teapot-emoji.svg" alt="teapot emoji">
                                     </div>
                                     <p>Tea</p>
-                                </div>
-                                <div class="tab-item">
+                                </button>
+                                <button class="tab-item tab-item-dessert">
                                     <div class="icon">
                                         <img src="./img/cake-emoji.svg" alt="cake emoji">
                                     </div>
                                     <p>Dessert</p>
-                                </div>
+                                </button>
                             </div>
                         </div>
-                        <div class="grid">
+                        <div id="coffee-grid" class="grid">
                             <div class="grid-preview">
                                 <div class="box">
                                     <div class="coffee-1"></div>
@@ -130,7 +129,7 @@
                                     <p>$5.00</p>
                                 </div>
                             </div>
-                            <div class="grid-preview">
+                            <div class="grid-preview hidden">
                                 <div class="box-5">
                                     <div class="coffee-5"></div>
                                 </div>
@@ -142,7 +141,7 @@
                                     <p>$4.50</p>
                                 </div>
                             </div>
-                            <div class="grid-preview">
+                            <div class="grid-preview hidden">
                                 <div class="box-6">
                                     <div class="coffee-6"></div>
                                 </div>
@@ -154,7 +153,7 @@
                                     <p>$5.50</p>
                                 </div>
                             </div>
-                            <div class="grid-preview">
+                            <div class="grid-preview hidden">
                                 <div class="box-7">
                                     <div class="coffee-7"></div>
                                 </div>
@@ -166,7 +165,7 @@
                                     <p>$5.50</p>
                                 </div>
                             </div>
-                            <div class="grid-preview">
+                            <div class="grid-preview hidden">
                                 <div class="box-8">
                                     <div class="coffee-8"></div>
                                 </div>
@@ -178,14 +177,170 @@
                                     <p>$6.50</p>
                                 </div>
                             </div>
+                            <div class="refresh">
+                                <div class="refresh-button">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg> 
+                                </div>
+                            </div>
                         </div>
-                        <div class="refresh">
-                        <div class="refresh-button">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+                        <div id="tea-grid" class="grid">
+                            <div class="grid-preview">
+                                <div class="box">
+                                    <div class="tea-1"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Moroccan</p>
+                                        <p>Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
+                                    </div>
+                                    <p>$4.50</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview">
+                                <div class="box">
+                                    <div class="tea-2"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Ginger</p>
+                                        <p>Original black tea with fresh ginger, lemon and honey</p>
+                                    </div>
+                                    <p>$5.00</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview">
+                                <div class="box">
+                                    <div class="tea-3"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Cranberry</p>
+                                        <p>Invigorating black tea with cranberry and honey</p>
+                                    </div>
+                                    <p>$5.00</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview">
+                                <div class="box">
+                                    <div class="tea-4"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Sea buckthorn</p>
+                                        <p>Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
+                                    </div>
+                                    <p>$5.50</p>
+                                </div>
+                            </div>
                         </div>
+                        <div id="dessert-grid" class="grid">
+                            <div class="grid-preview">
+                                <div class="box">
+                                    <div class="dessert-1"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Marble cheesecake</p>
+                                        <p>Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
+                                    </div>
+                                    <p>$3.50</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview">
+                                <div class="box">
+                                    <div class="dessert-2"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Red velvet</p>
+                                        <p>Layer cake with cream cheese frosting</p>
+                                    </div>
+                                    <p>$4.00</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview">
+                                <div class="box">
+                                    <div class="dessert-3"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Cheesecake</p>
+                                        <p>Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
+                                    </div>
+                                    <p>$4.50</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview">
+                                <div class="box">
+                                    <div class="dessert-4"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Creme brulee</p>
+                                        <p>Delicate creamy dessert in a caramel basket with wild berries</p>
+                                    </div>
+                                    <p>$4.00</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview hidden">
+                                <div class="box">
+                                    <div class="dessert-5"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Pancakes</p>
+                                        <p>Tender pancakes with strawberry jam and fresh strawberries</p>
+                                    </div>
+                                    <p>$4.50</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview hidden">
+                                <div class="box">
+                                    <div class="dessert-6"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Honey cake</p>
+                                        <p>Classic honey cake with delicate custard</p>
+                                    </div>
+                                    <p>$4.50</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview hidden">
+                                <div class="box">
+                                    <div class="dessert-7"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Chocolate cake</p>
+                                        <p>Cake with hot chocolate filling and nuts with dried apricots</p>
+                                    </div>
+                                    <p>$5.50</p>
+                                </div>
+                            </div>
+                            <div class="grid-preview hidden">
+                                <div class="box">
+                                    <div class="dessert-8"></div>
+                                </div>
+                                <div class="description">
+                                    <div class="title">
+                                        <p>Black forest</p>
+                                        <p>A combination of thin sponge cake with cherry jam and light chocolate mousses</p>
+                                    </div>
+                                    <p>$6.50</p>
+                                </div>
+                            </div>
+                            <div class="refresh">
+                                <div class="refresh-button">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg> 
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -231,12 +386,10 @@
                             <div class="opening hours">
                                 <p><img src="./img/clock.svg" alt="clock icon"> Mon-Sat: 9:00 AM - 23:00 PM</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </footer>
-
         </div>
+        <script src="menu.js"></script>
     </body>
