@@ -176,44 +176,14 @@ h1 {
   margin: 0;
   padding: 0;
 }
-.container .main .main-menu .menu-container .offer .tabs .tab-item-first {
-  display: flex;
-  padding: 8px 16px 8px 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 100px;
+.container .main .main-menu .menu-container .offer .tabs .tab-item.active {
   background: #665F55;
-  box-sizing: border-box;
 }
-.container .main .main-menu .menu-container .offer .tabs .tab-item-first .icon {
-  display: flex;
-  padding: 3px 7px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  background: #E1D4C9;
-}
-.container .main .main-menu .menu-container .offer .tabs .tab-item-first .icon img {
-  color: #403f3d;
-  width: 16px;
-  height: 24px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 150%;
-  text-decoration: none;
-}
-.container .main .main-menu .menu-container .offer .tabs .tab-item-first p {
+.container .main .main-menu .menu-container .offer .tabs .tab-item.active p {
   color: #E1D4C9;
-  font-feature-settings: "clig" off, "liga" off;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 150%;
-  text-decoration: none;
-  margin: 0;
 }
 .container .main .main-menu .menu-container .grid {
-  display: flex;
+  display: none;
   max-width: 1360px;
   justify-content: center;
   align-items: flex-start;
@@ -272,7 +242,6 @@ h1 {
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  /*box-sizing: border-box;*/
 }
 .container .main .main-menu .menu-container .grid .grid-preview .box .coffee-1 {
   width: 340px;
@@ -449,6 +418,258 @@ h1 {
   line-height: 125%;
   margin: 0;
 }
+.container .main .main-menu .menu-container .grid.show {
+  display: flex;
+}
+.container .main .main-menu .menu-container .grid {
+  display: none;
+  max-width: 1360px;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.container .main .main-menu .menu-container .grid .grid-preview {
+  display: flex;
+  height: 506px;
+  max-width: 310px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  border: 1px solid #C1B6AD;
+  box-sizing: border-box;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .tea-1 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .tea-2 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .tea-3 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .tea-4 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box {
+  display: flex;
+  width: 310px;
+  height: 310px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .tea-1 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/tea-1.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .tea-2 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/tea-2.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .tea-3 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/tea-3.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .tea-4 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/tea-4.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid.show {
+  display: flex;
+}
+.container .main .main-menu .menu-container .grid {
+  display: none;
+  max-width: 1360px;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.container .main .main-menu .menu-container .grid .grid-preview {
+  display: flex;
+  height: 506px;
+  max-width: 310px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  border: 1px solid #C1B6AD;
+  box-sizing: border-box;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .dessert-1 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .dessert-2 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .dessert-3 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .dessert-4 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .dessert-5 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .dessert-6 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .dessert-7 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview:hover .dessert-8 {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box {
+  display: flex;
+  width: 310px;
+  height: 310px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .dessert-1 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/dessert-1.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .dessert-2 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/dessert-2.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .dessert-3 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/dessert-3.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .dessert-4 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/dessert-4.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .dessert-5 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/dessert-5.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .dessert-6 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/dessert-6.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .dessert-7 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/dessert-7.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .box .dessert-8 {
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: url(./img/dessert-8.svg), lightgray 50%/cover no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .description {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  max-width: 310px;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .description .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .description .title p:first-of-type {
+  color: #403f3d;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  margin: 0;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .description .title p:last-of-type {
+  align-self: stretch;
+  color: #403f3d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+}
+.container .main .main-menu .menu-container .grid .grid-preview .description p {
+  align-self: stretch;
+  color: #403f3d;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  margin: 0;
+}
+.container .main .main-menu .menu-container .grid.show {
+  display: flex;
+}
 .container .main .main-menu .menu-container .refresh {
   display: none;
 }
@@ -466,7 +687,6 @@ h1 {
   box-sizing: border-box;
   padding: 100px;
   justify-content: center;
-  /*align-items: center;*/
   gap: 100px;
   align-self: stretch;
   border-radius: 40px;
@@ -608,16 +828,10 @@ h1 {
   .container .main .main-menu .menu-container .offer .offer-text {
     margin: 0 10px 0 10px;
   }
-  .container .main .main-menu .menu-container .grid > div:nth-of-type(5) {
+  .container .main .main-menu .menu-container #coffee-grid .hidden {
     display: none;
   }
-  .container .main .main-menu .menu-container .grid > div:nth-of-type(6) {
-    display: none;
-  }
-  .container .main .main-menu .menu-container .grid > div:nth-of-type(7) {
-    display: none;
-  }
-  .container .main .main-menu .menu-container .grid > div:nth-of-type(8) {
+  .container .main .main-menu .menu-container #dessert-grid .hidden {
     display: none;
   }
   .container .main .main-menu .menu-container .refresh {
@@ -647,7 +861,6 @@ h1 {
   }
   .container #contacts .contacts-container {
     display: flex;
-    /*max-width: 1360px;*/
     padding: 100px 60px;
     flex-direction: column;
     justify-content: center;

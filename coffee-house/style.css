@@ -106,12 +106,17 @@ h1 {
   justify-content: center;
   align-items: flex-start;
   align-self: stretch;
-  background-image: url("./img/img-hero.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   border-radius: 40px;
   overflow: hidden;
+  position: relative;
+}
+.container .header .hero-inner-container .background-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 .container .header .offer {
   display: flex;
@@ -695,14 +700,17 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) {
-  nav {
+  .desktop-nav {
     display: none;
   }
-  nav a img {
+  .desktop-nav a img {
     display: none;
   }
-  nav a div {
+  .desktop-nav a div {
     display: none;
+  }
+  .container .header {
+    width: 100%;
   }
   .container .header .header-container a {
     display: none;
@@ -722,6 +730,74 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 8px;
+  }
+  .container .header .header-container .burger-button .burger-menu .bar {
+    width: 16px;
+    height: 1px;
+    background-color: #403f3d;
+    transition: all 0.3s ease-in-out;
+  }
+  .container .header .header-container .burger-button.active .bar:first-of-type {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .container .header .header-container .burger-button.active .bar:last-of-type {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+  .container .header .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 100px;
+    width: 100%;
+    min-height: 100vh;
+    left: 100%;
+    transition: 0.4s;
+    z-index: 99;
+    background-color: #E1D4C9;
+    top: 80px;
+  }
+  .container .header .mobile-menu a {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+    color: #403f3d;
+    text-align: center;
+    text-decoration: none;
+  }
+  .container .header .mobile-menu .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 60px;
+    align-items: center;
+    align-self: stretch;
+  }
+  .container .header .mobile-menu .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    list-style: none;
+    padding: 0;
+    gap: 60px;
+    margin: 0;
+  }
+  .container .header .mobile-menu .mobile-coffee-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .container .header .mobile-menu .mobile-coffee-menu img {
+    width: 40px;
+    height: 40px;
+  }
+  .container .header .mobile-menu.active {
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
   .container .header .hero-inner-container {
     padding: 100px 60px;

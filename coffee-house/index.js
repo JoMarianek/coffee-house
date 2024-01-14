@@ -1,1 +1,12 @@
-console.log('1. validation of home: +6\n 2. Favicon: +4\n 3. I didnt have time to check wether its pixelperfect, ill just assume its not so 50% of point for any layout section\n 4. header+3, enjoy+3, favorites +3 about +3\n 5.image position using flexbox on homepage +2\n 6. background color across page +2\7. Navigation on home page +6\n 8. Smooth scrolling: +2\ 9.footer interactive links +4');
+const burger = document.querySelector('.burger-button');
+const mobileMenu = document.querySelector('.mobile-menu')
+
+burger.addEventListener("click", () => {
+    burger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+})
+
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    burger.classList.remove('active');
+    mobileMenu.classList.remove('active')
+}))
