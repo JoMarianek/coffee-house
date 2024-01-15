@@ -88,6 +88,9 @@ h1 {
 .container .main .main-container .header-menu .burger-button {
   display: none;
 }
+.container .main .mobile-menu {
+  display: none;
+}
 .container .main .main-menu {
   display: flex;
   padding: 0 40px;
@@ -824,6 +827,74 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 8px;
+  }
+  .container .main .main-container .header-menu .burger-button .burger-menu .bar {
+    width: 16px;
+    height: 1px;
+    background-color: #403f3d;
+    transition: all 0.3s ease-in-out;
+  }
+  .container .main .main-container .header-menu .burger-button.active .bar:first-of-type {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .container .main .main-container .header-menu .burger-button.active .bar:last-of-type {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+  .container .main .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 100px;
+    width: 100%;
+    min-height: 100vh;
+    left: 100%;
+    transition: 0.4s;
+    z-index: 99;
+    background-color: #E1D4C9;
+    top: 80px;
+  }
+  .container .main .mobile-menu a {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+    color: #403f3d;
+    text-align: center;
+    text-decoration: none;
+  }
+  .container .main .mobile-menu .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 60px;
+    align-items: center;
+    align-self: stretch;
+  }
+  .container .main .mobile-menu .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    list-style: none;
+    padding: 0;
+    gap: 60px;
+    margin: 0;
+  }
+  .container .main .mobile-menu .mobile-coffee-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .container .main .mobile-menu .mobile-coffee-menu img {
+    width: 40px;
+    height: 40px;
+  }
+  .container .main .mobile-menu.active {
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
   .container .main .main-menu .menu-container .offer .offer-text {
     margin: 0 10px 0 10px;
